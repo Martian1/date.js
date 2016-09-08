@@ -1,0 +1,25 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Date扩展</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script src="../date.min.js"></script>
+    <script type="text/javascript">
+    var time = new Date();
+    var content="";
+    content+="当前时间："+time+
+             "<br>格式化："+time.format("YYYY-MM-DD hh:mm:ss")+
+             "<br>是否闰年："+time.isLeap()+
+             "<br>加一天："+time.add(1,"day").format("YYYY-MM-DD")+
+             "<br>加一年："+time.add(1,"year").format("YYYY-MM-DD")+
+             "<br>减三月："+time.sub(3,"month").format("YYYY-MM-DD")+
+             "<br>星期："+time.getWeek()+
+             "<br>周："+time.getWeek(1)+
+             "<br>week："+time.getWeek(2);
+    document.getElementById("demo").innerHTML=content;
+    </script>
+</body>
+
+</html> 
